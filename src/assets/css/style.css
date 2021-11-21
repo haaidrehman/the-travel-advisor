@@ -1,0 +1,423 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav{
+    background-color: #00bcd6;
+    height: 52px;
+    line-height: 52px;
+}
+
+nav .brand-logo{
+    max-width: 45px;
+    height: 45px;
+    top: 10%;
+    left: 5%;
+    
+}
+
+.brand-logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.nav-wrapper{
+    display: flex;
+    position: relative;
+}
+
+.nav-wrapper .item-left {
+    width: 20%;
+}
+
+.nav-wrapper .item-right {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .input-field {
+    width: 65%;
+    height: 40px;
+    background: white;
+}
+
+.item-right .submit-icon{
+    width: 10%;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.input-field>label {
+    color: black;
+   
+}
+
+nav .input-field label {
+    top: -22px;
+    left: 7px;
+}
+
+.placeholder-to-top{
+    top: -5px!important;
+}
+
+.light-bg{
+    /* background: #4484e4; */
+    background: #03dac6;
+}
+
+.main{
+    width: 100%;
+    margin: 40px 0 0 0;
+}
+
+
+.map-container{
+    width: 100%;
+    height: 800px;
+    box-sizing: border-box;
+    box-shadow: -4px 9px 18px -3px black;
+}
+
+
+.map-container:nth-child(1){
+    filter: brightness(130%);
+}
+
+.card .card-image {
+    height: 273px;
+}
+
+.card .card-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.place-marker-blur{
+    backdrop-filter: 40%;
+}
+
+.card.place-marker .card-image {
+    height: 93px;
+}
+
+.card-content{
+    color: white;
+}
+
+.toolbox{
+    margin: 0 0 50px 0;
+}
+
+.toolbox .flow-text{
+    margin: 0 0 20px 0;
+    font-family: sans-serif;
+}
+
+
+.box{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.box.first-box{
+    justify-content: flex-start;
+}
+
+.box.first-box div{
+    margin: 0 5px 0 5px;
+}
+
+.box p:nth-child(2) , .o-u-r, .phone-link{
+    color: #fff9c4;
+}
+
+.box-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.custom-badge{
+    font-size: 12px;
+}
+
+.box-grid div{
+    display: flex;
+    margin: 5px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+.box-grid div p{
+    background-color: #607d8beb;
+    padding: 2px 5px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.address-img-wrapper{
+    margin: 0 15px 0 0;
+}
+
+.address-text{
+    font-size: 14px;
+}
+
+.list-container{
+    width: 100%;
+    height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.list-container::-webkit-scrollbar {
+    height: 30px;
+  }
+
+.list-container::-webkit-scrollbar-track {
+    background: #ff9800; 
+  }
+
+.list-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(
+        40deg
+        ,#ff6ec4,#7873f5);
+  }
+
+.preloader-container{
+    display: flex;
+    height: 350px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card.place-marker{
+    width: 120px;
+    height: 135px;
+    position: absolute;
+}
+
+.card.place-marker:hover{
+    /* width: 400px; */
+    box-shadow: 2px 5px 15px 3px #c0c0c0;
+    z-index: 999;
+}
+
+.card.place-marker .small-text{
+    font-size: 12px;
+
+}
+
+.card.place-marker .card-content {
+    padding: 5px;
+}
+
+
+.card.place-marker .card-image img {
+    filter: brightness(75%);
+}
+
+.card-title.on-map{
+    width: 100%;
+    padding: 8px 24px;
+    background: #0a0a0b45;
+}
+
+.autocomplete{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    right: 13px;
+    width: 100%;
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: -3px 8px 20px 0px #201f1f;
+    z-index: 999;
+}
+
+.flex-input{
+    display: flex;
+}
+
+.item-flex{
+    display: flex;
+}
+
+.autocomplete ul li{
+    line-height: 14px;
+    font-size: 12px;
+    margin-top: 10px;
+    color: black;
+    cursor: pointer;
+    float: none!important;
+}
+
+.autocomplete ul li:hover{
+    width: 100%;
+    background-color: #00bcd4;
+    color: white;
+    padding: 5px 0 5px 5px;
+}
+
+
+/* ----------------Media Query---------------- */
+
+
+@media screen and (min-width: 601px) and (max-width: 768px){
+    .card.list-card .card-image {
+        height: 145px;
+    }
+
+    .card.list-card  .card-title {
+        font-size: 16px;
+    }
+
+    .o-u-r{
+        margin: 0 0 0 30px;
+    }
+
+    .card.list-card  .card-content {
+        padding: 8px;
+    }
+
+    .card.list-card .box-grid div p {
+        background-color: #607d8beb;
+        padding: 2px 2px;
+        border-radius: 3px;
+        font-size: 10px;
+        text-align: center;
+    }
+
+    .card-action{
+        font-size: 14px;
+    }
+
+    .box.rank p:nth-child(2){
+       margin: 0 0 0 15px;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 700px){
+    .box.first-box div{
+        margin: 0;
+    }
+    .o-u-r {
+        margin: 0 0 0 30px!important;
+    }
+}
+
+
+@media screen and (max-width: 600px){
+    .map-container{
+        height: 680px;
+        margin-top: 15px;
+    }
+}
+
+
+@media screen and (max-width: 500px){
+    .map-container{
+        height: 620px;
+    }
+}
+
+@media screen and (max-width: 414px){
+    nav .brand-logo {
+        left: 9%;
+    }
+
+    nav .input-field {
+        width: 71%;
+    }
+
+    .nav-wrapper .input-field input[type=search] {
+        padding-left: 1rem;
+    }
+
+    nav .input-field label {
+        left: 1px;
+        font-size: 11px;
+    }
+
+    .autocomplete{
+        right: -26px;
+        width: 320px;
+    }
+    .card.list-card .card-title {
+        font-size: 20px;
+    }
+    .card.list-card .card-image {
+        height: 190px;
+    }
+
+    .card.list-card .card-content {
+        padding: 6px 15px;
+        border-radius: 0 0 2px 2px;
+    }
+
+    .card .card-content p {
+        font-size: 12px;
+    }
+
+    .card.list-card .card-action {
+        padding: 11px 24px;
+    }
+
+    .card.list-card br{
+        display: none;
+    }
+
+    .map-container {
+        height: 580px;
+    }
+}
+
+
+
+@media screen and (max-width: 375px){
+        .autocomplete ul li {
+            font-size: 10px;
+        }
+
+        .card .card-content p {
+            font-size: 11px;
+        }
+
+        .custom-badge p{
+            font-size: 10px!important;
+        }
+}
+
+@media screen and (max-width: 320px){
+    .autocomplete {
+        right: -26px;
+        width: 250px;
+    }
+    .autocomplete ul li {
+        font-size: 9px;
+    }
+    .map-container {
+        height: 500px;
+    }
+}
+
+
+@media screen and (max-width: 270px){
+    .autocomplete {
+        width: 220px;
+    }
+}
